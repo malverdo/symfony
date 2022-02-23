@@ -10,6 +10,7 @@ services:
     _defaults:
         autowire: true      # Automatically injects dependencies in your services.
         autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+        public: false
         bind:
             $adminSms: 'manager@example.com'
 
@@ -22,13 +23,22 @@ services:
             - '../src/Entity/'
             - '../src/Kernel.php'
 
+    App\Infrastructure\Controller\:
+        resource: '../src/Infrastructure/Controller/'
+        tags: [ 'controller.service_arguments' ]
+
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
 
 
+    generator.true:
+        '@App\Infrastructure\Controller\PriceController'
+        
 
-    App\Controller\ProductController:
+
+    App\Infrastructure\Controller\ProductController:
+        tags: [ 'controller.service_arguments' ]
         calls:
             - setLogger: [ '@logger' ]
         arguments:
-            $adminEmail: '@App\Service\MessageGenerator'
+            $adminEmail: '@generator.true'
