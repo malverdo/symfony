@@ -1,6 +1,6 @@
-controllers:
-    resource: ../src/Controller/
-    type: annotation
+#controllers:
+#    resource: ../src/Controller/
+#    type: annotation
 
 kernel:
     resource: ../src/Kernel.php
@@ -8,4 +8,8 @@ kernel:
 
 blog_list:
     path: /test
-    controller: App\Controller\ProductController::list
+    controller: App\Infrastructure\Controller\ProductController::list
+
+blog:
+    path: /blog
+    controller: App\Infrastructure\Controller\PriceController::list
