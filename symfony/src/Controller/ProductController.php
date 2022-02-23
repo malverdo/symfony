@@ -2,11 +2,22 @@
 
 namespace App\Controller;
 
+
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
 
-class ProductController
+class ProductController extends AbstractController
 {
 
+
+
+    public function list(LoggerInterface $logger): Response
+    {
+        $logger->info('Look, I just used a service!');
+        $response = new Response();
+        $response->setContent('hello world');
+        $response->headers->set('Content-Type', 'application/json');
+        return $response;
+    }
 }
