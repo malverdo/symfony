@@ -2,7 +2,9 @@
 
 namespace App\Service;
 
-class MessageGenerator
+use App\Service\Contract\MessageInterface;
+
+class MessageGenerator implements MessageInterface
 {
     public function getHappyMessage(): string
     {
