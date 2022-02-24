@@ -9,13 +9,21 @@ class Kernel extends BaseKernel
 {
     use MicroKernelTrait;
 
+    # изменить кодировку
     public function getCharset(): string
     {
         return 'UTF-8';
     }
 
-    public function getProjectDir(): string
+      #изменить ProjectDir - /home/apps/symfony
+      #public function getProjectDir(): string
+      #{
+      #    return \dirname(__DIR__);
+      #}
+
+    #хранение кеша - /home/apps/symfony/var/cache/dev
+    public function getCacheDir(): string
     {
-        return \dirname(__DIR__);
+        return $this->getProjectDir().'/var/cache/'.$this->environment;
     }
 }
