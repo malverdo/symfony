@@ -5,6 +5,17 @@
 # https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration
 parameters:
 
+    # file /var/cache/dev/App_KernelDevDebugContainer.php
+    # хэш содержимого всех ваших исходных файлов;
+    # container.build_hash: 'nameHash'
+    # временная метка момента сборки контейнера (результат выполнения PHP- функции времени );
+    # container.build_time: 123321423
+    # результат слияния двух предыдущих параметров и кодирования результата с помощью CRC32.
+    # container.build_id: 'nameId'
+    # установить для него неизменное время сборки, чтобы добиться строго воспроизводимой сборки:
+    # kernel.container_build_time: 123321423
+
+
 services:
     # default configuration for services in *this* file
     _defaults:
