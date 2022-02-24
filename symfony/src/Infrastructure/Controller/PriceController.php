@@ -23,7 +23,7 @@ class PriceController
 
 
         $response = new Response();
-        $response->setContent('asd');
+        $response->setContent('asd ');
         $response->headers->set('Content-Type', 'application/json');
         return $response;
     }
