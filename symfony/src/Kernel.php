@@ -26,4 +26,10 @@ class Kernel extends BaseKernel
     {
         return $this->getProjectDir().'/var/cache/'.$this->environment;
     }
+
+    #хранение log - /home/apps/symfony/var/log
+    public function  getLogDir(): string
+    {
+        return $this->getProjectDir().'/var/log';
+    }
 }
