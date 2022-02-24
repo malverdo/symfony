@@ -8,4 +8,14 @@ use Symfony\Component\HttpKernel\Kernel as BaseKernel;
 class Kernel extends BaseKernel
 {
     use MicroKernelTrait;
+
+    public function getCharset(): string
+    {
+        return 'UTF-8';
+    }
+
+    public function getProjectDir(): string
+    {
+        return \dirname(__DIR__);
+    }
 }
