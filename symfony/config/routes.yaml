@@ -13,3 +13,7 @@ blog_list:
 blog:
     path: /blog
     controller: App\Infrastructure\Controller\PriceController::list
+
+app_lucky_number:
+    path: /lucky/number
+    controller: App\Controller\LuckyController::number
