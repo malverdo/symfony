@@ -2,9 +2,10 @@
 
 namespace App\Infrastructure\Controller;
 
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 
-class LuckyController
+class LuckyController extends AbstractController
 {
     /**
      * @throws \Exception
