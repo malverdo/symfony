@@ -18,4 +18,4 @@ app_lucky_number:
     path: /lucky/number
     controller: App\Infrastructure\Controller\LuckyController::number
     methods: POST
-    condition:  "context.getMethod() in ['POST', 'GET'] and request.headers.get('User-Agent') matches '/firefox/i'"
+    #condition:  "context.getMethod() in ['POST', 'GET'] and request.headers.get('User-Agent') matches '/firefox/i'"
