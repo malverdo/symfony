@@ -19,3 +19,11 @@ app_lucky_number:
     controller: App\Infrastructure\Controller\LuckyController::number
     methods: POST
     #condition:  "context.getMethod() in ['POST', 'GET'] and request.headers.get('User-Agent') matches '/firefox/i'"
+
+blog_show:
+    path: /blog/list/{page}
+    controller: App\Infrastructure\Controller\BlogController::list
+    defaults:
+        page: 1
+    requirements:
+        page: '\d+'
