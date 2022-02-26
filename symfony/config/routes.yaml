@@ -27,3 +27,9 @@ blog_show:
         page: 1
     requirements:
         page: '1|2'
+
+cache:
+    path: /cache
+    controller: App\Infrastructure\Controller\CacheHttpController::index
+    methods: GET
+    stateless: true
