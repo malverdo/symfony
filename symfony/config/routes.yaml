@@ -32,4 +32,4 @@ cache:
     path: /cache
     controller: App\Infrastructure\Controller\CacheHttpController::index
     methods: GET
-    stateless: true
+#    stateless: true
