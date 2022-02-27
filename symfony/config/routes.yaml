@@ -43,3 +43,8 @@ flash:
     path: /flash
     controller: App\Infrastructure\Controller\Controller\FlashController::index
     methods: GET
+
+cookie:
+    path: /cookie
+    controller: App\Infrastructure\Controller\Controller\CookieController::index
+    methods: GET
