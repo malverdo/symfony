@@ -3,7 +3,6 @@
 namespace App\Infrastructure\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Exception\RouteNotFoundException;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
@@ -12,14 +11,10 @@ class GenerateUrlController extends AbstractController
 
     public function index()
     {
-
         try {
             // generate a URL with no route arguments - /blog/list
-            $signUpPage = $this->generateUrl('blog_show1');
-        } catch (RouteNotFoundException $e) {
-        }
-
-
+            $signUpPage = $this->generateUrl('blog_show');
+        } catch (RouteNotFoundException $e) { }
 
         // generate a URL with route arguments - /blog/list?username=qwe
         $userProfilePage = $this->generateUrl('blog_show', [
