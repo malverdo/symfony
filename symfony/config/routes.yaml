@@ -38,3 +38,8 @@ generate_url2:
     path: /generate
     controller: App\Infrastructure\Controller\Router\GenerateUrlController::index
     methods: GET
+
+flash:
+    path: /flash
+    controller: App\Infrastructure\Controller\Controller\FlashController::index
+    methods: GET
