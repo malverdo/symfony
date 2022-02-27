@@ -1,9 +1,8 @@
 <?php
 
-namespace App\Infrastructure\Controller;
+namespace App\Infrastructure\Controller\Router;
 
 use App\Service\MessageGenerator;
-use Psr\Log\LoggerInterface;
 use Symfony\Component\HttpFoundation\Response;
 
 class PriceController

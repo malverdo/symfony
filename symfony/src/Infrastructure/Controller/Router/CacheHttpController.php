@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Infrastructure\Controller;
+namespace App\Infrastructure\Controller\Router;
 
-use \Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 

@@ -8,21 +8,21 @@ kernel:
 
 blog_list:
     path: /test
-    controller: App\Infrastructure\Controller\ProductController::list
+    controller: App\Infrastructure\Controller\Router\ProductController::list
 
 blog:
     path: /blog
-    controller: App\Infrastructure\Controller\PriceController::list
+    controller: App\Infrastructure\Controller\Router\PriceController::list
 
 app_lucky_number:
     path: /lucky/number
-    controller: App\Infrastructure\Controller\LuckyController::number
+    controller: App\Infrastructure\Controller\Router\LuckyController::number
     methods: POST
     #condition:  "context.getMethod() in ['POST', 'GET'] and request.headers.get('User-Agent') matches '/firefox/i'"
 
 blog_show:
     path: /blog/list/{page}
-    controller: App\Infrastructure\Controller\BlogController::list
+    controller: App\Infrastructure\Controller\Router\BlogController::list
     defaults:
         page: 1
     requirements:
@@ -30,11 +30,11 @@ blog_show:
 
 cache:
     path: /cache
-    controller: App\Infrastructure\Controller\CacheHttpController::index
+    controller: App\Infrastructure\Controller\Router\CacheHttpController::index
     methods: GET
 #    stateless: true
 
 generate_url2:
     path: /generate
-    controller: App\Infrastructure\Controller\GenerateUrlController::index
+    controller: App\Infrastructure\Controller\Router\GenerateUrlController::index
     methods: GET
