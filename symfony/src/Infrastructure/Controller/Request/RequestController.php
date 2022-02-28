@@ -12,7 +12,7 @@ class RequestController extends AbstractController
 {
     public function index(Request $request, $a = 1, $b = 3): Response
     {
-
+//        $this->generateUrl('sd');
         $response = new Response('dog' . $a . ' ' . $b);
         return $response;
     }
