@@ -54,3 +54,9 @@ services:
             - setLogger: [ '@logger' ]
         arguments:
             $adminEmail: '@generator.true'
+
+
+# listener
+    App\Infrastructure\EventListener\ControllerArguments:
+        tags:
+            - { name: kernel.event_listener, event: kernel.controller_arguments }
