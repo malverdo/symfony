@@ -52,4 +52,4 @@ cookie:
 kernelq:
     path: /kernelq
     controller: App\Infrastructure\Controller\Request\RequestController::index
-    methods: GET
+    methods: [GET, POST]
