@@ -48,3 +48,8 @@ cookie:
     path: /cookie
     controller: App\Infrastructure\Controller\Controller\CookieController::index
     methods: GET
+
+kernelq:
+    path: /kernelq
+    controller: App\Infrastructure\Controller\Request\RequestController::index
+    methods: GET
