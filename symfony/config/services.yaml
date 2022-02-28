@@ -56,7 +56,11 @@ services:
             $adminEmail: '@generator.true'
 
 
-# listener
+    # listener
     App\Infrastructure\EventListener\ControllerArguments:
         tags:
             - { name: kernel.event_listener, event: kernel.controller_arguments }
+
+    App\Infrastructure\EventListener\Requestlistener:
+        tags:
+            - { name: kernel.event_listener, event: kernel.request }
