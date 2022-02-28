@@ -15,8 +15,9 @@ class ControllerArguments
         $namedArguments = $event->getRequest()->attributes->all();
         $controllerArguments = $event->getArguments();
 
+
         // set the controller arguments to modify the original arguments or add new ones
-        $event->setArguments(['request' => $controllerArguments[0], 'b' => 2]);
+        $event->setArguments($controllerArguments);
     }
 
 }
