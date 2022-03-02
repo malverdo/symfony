@@ -53,3 +53,8 @@ kernelq:
     path: /kernelq
     controller: App\Infrastructure\Controller\Request\RequestController::index
     methods: [GET, POST]
+
+doctrine:
+    path: /doctrine
+    controller: App\Infrastructure\Controller\Controller\DoctrineController::index
+    methods: [GET, POST]
