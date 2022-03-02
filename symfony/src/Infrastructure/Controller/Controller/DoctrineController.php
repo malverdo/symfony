@@ -2,6 +2,7 @@
 
 namespace App\Infrastructure\Controller\Controller;
 
+use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\DependencyInjection\ParameterBag\ContainerBagInterface;
 use Symfony\Component\HttpFoundation\Cookie;
@@ -15,9 +16,11 @@ class DoctrineController extends AbstractController
 
 
 
-    public function index()
+    public function index(ManagerRegistry $doctrine)
     {
 
+        $connection = $doctrine->getConnection('cardsmile_personal');
+        $result = $connection->fetchAllAssociative('SELECT * FROM customer');
 
         $response = new Response('dog');
 
