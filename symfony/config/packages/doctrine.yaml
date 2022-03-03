@@ -31,7 +31,14 @@ doctrine:
                         dir: '%kernel.project_dir%/src/Entity/Cardsmile'
                         prefix: 'App\Entity\Cardsmile'
                         alias: cardsmile
-
+            cardsmile_personal:
+                connection: cardsmile_personal
+                mappings:
+                    Customer:
+                        type: yml
+                        dir: '%kernel.project_dir%/src/Entity/doctrine_orm'
+                        prefix: 'App\Entity\CardsmilePersonal'
+                        is_bundle: false
 
 when@test:
     doctrine:
