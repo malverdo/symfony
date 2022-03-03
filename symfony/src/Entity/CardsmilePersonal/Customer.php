@@ -6,16 +6,13 @@ use App\Repository\CustomerRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass=CustomerRepository::class)
- * @ORM\Table(name="customer")
+ *
  */
 class Customer
 {
 
     /**
-     * @ORM\Id()
-     * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
+     *
      */
     private int $id;
 
@@ -52,7 +49,7 @@ class Customer
     }
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * string
      */
     private string $name;
 
