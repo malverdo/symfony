@@ -2,25 +2,29 @@
 
 namespace App\Infrastructure\Controller\Controller;
 
+use App\Entity\CardsmilePersonal\Customer;
+use App\Repository\CustomerRepository;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\DependencyInjection\ParameterBag\ContainerBagInterface;
-use Symfony\Component\HttpFoundation\Cookie;
-use Symfony\Component\HttpFoundation\File\File;
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpFoundation\ResponseHeaderBag;
 
 class DoctrineController extends AbstractController
 {
 
+    private CustomerRepository $customerRepository;
 
+    public function __construct(CustomerRepository $customerRepository)
+    {
+        $this->customerRepository = $customerRepository;
+    }
 
-    public function index(ManagerRegistry $doctrine)
+    public function index()
     {
 
-        $connection = $doctrine->getConnection('cardsmile_personal');
-        $result = $connection->fetchAllAssociative('SELECT * FROM customer');
+
+        $a = $this->customerRepository->findAll();
+
+        dd($a);
 
         $response = new Response('dog');
 
