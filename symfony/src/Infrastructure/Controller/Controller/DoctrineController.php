@@ -13,12 +13,12 @@ class DoctrineController extends AbstractController
 
     private CustomerRepository $customerRepository;
 
-    public function __construct(CustomerRepository $customerRepository)
+    public function __construct(CustomerRepository $customerRepository, )
     {
         $this->customerRepository = $customerRepository;
     }
 
-    public function index()
+    public function index(Customer $customer)
     {
 
 
