@@ -20,10 +20,7 @@ class DoctrineController extends AbstractController
 
     public function index(Customer $customer)
     {
-
-
         $a = $this->customerRepository->findAll();
-
         dd($a);
 
         $response = new Response('dog');
