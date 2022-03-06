@@ -28,6 +28,6 @@ final class Version20220305065120_user_card extends AbstractMigration
     }
     public function down(Schema $schema): void
     {
-        $this->addSql('DROP TABLE user');
+        $this->addSql('DROP TABLE "user_card"');
     }
 }
