@@ -18,8 +18,9 @@ class DoctrineController extends AbstractController
         $this->customerRepository = $customerRepository;
     }
 
-    public function index(Customer $customer)
+    public function index()
     {
+        $customer = Customer::create('malverdo');
         $a = $this->customerRepository->findAll();
         dd($a);
 
