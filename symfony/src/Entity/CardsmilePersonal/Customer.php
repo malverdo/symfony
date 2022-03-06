@@ -53,6 +53,11 @@ class Customer
      */
     private string $name;
 
-
+    public static function create($name): Customer
+    {
+        $customer = new self();
+        $customer->setName($name);
+        return $customer;
+    }
 
 }
