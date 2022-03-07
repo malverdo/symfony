@@ -4,14 +4,29 @@ namespace App\Repository;
 
 use App\Entity\CardsmilePersonal\Customer;
 use App\Infrastructure\Base\AbstractBaseRepository;
-use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 class CustomerRepository  extends  AbstractBaseRepository
 {
+    public function getModel(): string
+    {
+        return Customer::class;
+    }
+
+    public function getBD(): string
+    {
+        return 'cardsmile_personal';
+    }
+
+    public function getTableAlias(): string
+    {
+        return 'c';
+    }
+
+
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct('cardsmile_personal', Customer::class, $registry);
+        parent::__construct($this->getBD(), $this->getModel(), $registry);
     }
 
     public function save(Customer $customer)
@@ -27,7 +42,12 @@ class CustomerRepository  extends  AbstractBaseRepository
 
     public function findName($name)
     {
-        $createQueryBuilder = $this->createQueryBuilder('c')->where('c.name = :name')->setParameter('name', $name)->setFirstResult(0)->setMaxResults(3);
+        $createQueryBuilder = $this->createQueryBuilder($this->getTableAlias())
+            ->where('c.name = :name')
+            ->setParameter('name', $name)
+            ->setFirstResult(0)
+            ->setMaxResults(3);
+
         $query = $createQueryBuilder->getQuery();
         return $query->getResult();
 
