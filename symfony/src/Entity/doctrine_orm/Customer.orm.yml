@@ -13,3 +13,8 @@ App\Entity\CardsmilePersonal\Customer:
     name:
       type: string
       length: 16
+
+  oneToMany:
+    category:
+      targetEntity: App\Entity\CardsmilePersonal\Category
+      mappedBy: customer
