@@ -1,0 +1,24 @@
+App\Entity\CardsmilePersonal\Category:
+  type: entity
+  table: category
+  repositoryClass: App\Repository\CategoryRepository
+
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+
+  fields:
+    title:
+      type: text
+    content:
+      type: text
+
+  ManyToOne:
+    customer:
+      targetEntity: App\Entity\CardsmilePersonal\Customer
+      inversedBy: category
+#      joinColumn:
+#        name: customer_id
+#        referencedColumnName: id
