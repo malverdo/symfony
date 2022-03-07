@@ -3,7 +3,9 @@
 namespace App\Entity\CardsmilePersonal;
 
 use App\Repository\CustomerRepository;
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\PersistentCollection;
 
 /**
  *
@@ -59,5 +61,38 @@ class Customer
         $customer->setName($name);
         return $customer;
     }
+
+    private mixed $category;
+
+    public function __construct()
+    {
+        $this->category = new ArrayCollection();
+    }
+
+    public function addCategory(Category $category)
+    {
+        $this->category[] = $category;
+    }
+
+    public function getCategory()
+    {
+        return $this->category;
+    }
+
+//    /**
+//     * @return PersistentCollection
+//     */
+//    public function getCategory(): PersistentCollection
+//    {
+//        return $this->category;
+//    }
+//
+//    /**
+//     * @param PersistentCollection $category
+//     */
+//    public function setCategory(PersistentCollection $category): void
+//    {
+//        $this->category = $category;
+//    }
 
 }
