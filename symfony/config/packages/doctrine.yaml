@@ -34,7 +34,7 @@ doctrine:
             cardsmile_personal:
                 connection: cardsmile_personal
                 mappings:
-                    Customer:
+                    cardsmile_personal:
                         type: yml
                         dir: '%kernel.project_dir%/src/Entity/doctrine_orm'
                         prefix: 'App\Entity\CardsmilePersonal'
