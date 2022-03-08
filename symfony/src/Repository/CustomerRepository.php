@@ -2,7 +2,7 @@
 
 namespace App\Repository;
 
-use App\Entity\CardsmilePersonal\Customer;
+use App\Entity\Cardsmile\Customer;
 use App\Infrastructure\Base\AbstractBaseRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
@@ -15,7 +15,7 @@ class CustomerRepository  extends  AbstractBaseRepository
 
     public function getBD(): string
     {
-        return 'cardsmile_personal';
+        return 'cardsmile';
     }
 
     public function getTableAlias(): string
