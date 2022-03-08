@@ -15,6 +15,6 @@ App\Entity\CardsmilePersonal\Customer:
       length: 16
 
   oneToMany:
-    category:
+    categorys:
       targetEntity: App\Entity\CardsmilePersonal\Category
       mappedBy: customer
