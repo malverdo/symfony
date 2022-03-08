@@ -2,7 +2,7 @@
 
 namespace App\Repository;
 
-use App\Entity\CardsmilePersonal\Category;
+use App\Entity\Cardsmile\Category;
 use App\Infrastructure\Base\AbstractBaseRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
@@ -15,7 +15,7 @@ class CategoryRepository extends  AbstractBaseRepository
 
     public function getBD(): string
     {
-        return 'cardsmile_personal';
+        return 'cardsmile';
     }
 
     public function getTableAlias(): string
