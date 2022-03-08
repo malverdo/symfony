@@ -1,30 +1,66 @@
 <?php
 
-namespace App\Entity\CardsmilePersonal;
+namespace App\Entity\Cardsmile;
 
+use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\Mapping\Entity;
+use Doctrine\ORM\Mapping\JoinColumn;
+use Doctrine\ORM\Mapping\ManyToOne;
+use Doctrine\ORM\Mapping\Table;
+
+/**
+ * @Entity
+ * @Table(name="category")
+ * @Entity(repositoryClass="App\Repository\CategoryRepository")
+ */
 class Category
 {
 
+    /**
+     * @ORM\Id
+     * @ORM\GeneratedValue
+     * @ORM\Column(type="integer")
+     */
     private int $id;
-    private mixed $customer;
+
+    /**
+     * @ORM\Column(type="text")
+     */
     private string $title;
+
+    /**
+     * @ORM\Column(type="text")
+     */
     private string $content;
 
-    public function setCustomer(Customer $customer)
+    /**
+     * Many features have one product. This is the owning side.
+     * @ManyToOne(targetEntity="App\Entity\Cardsmile\Customer", inversedBy="categorys")
+     * @JoinColumn(name="customer_id", referencedColumnName="id")
+     */
+    private mixed $customers;
+
+    /**
+     * @return Customer
+     */
+    public function getCustomers(): Customer
     {
-        $customer->addCategory($this);
-        $this->customer = $customer;
+        return $this->customers;
     }
 
-    public function getCustomer()
+    /**
+     * @param Customer $customers
+     */
+    public function setCustomers(Customer $customers): void
     {
-        return $this->customer;
+        $this->customers = $customers;
     }
+
 
     public static function create($customer, $title, $content): Category
     {
         $category = new self();
-        $category->setCustomer($customer);
+        $category->setCustomers($customer);
         $category->setTitle($title);
         $category->setContent($content);
         return $category;
