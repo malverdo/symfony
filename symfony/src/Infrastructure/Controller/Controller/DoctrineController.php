@@ -2,11 +2,10 @@
 
 namespace App\Infrastructure\Controller\Controller;
 
-use App\Entity\CardsmilePersonal\Category;
-use App\Entity\CardsmilePersonal\Customer;
+use App\Entity\Cardsmile\Category;
+use App\Entity\Cardsmile\Customer;
 use App\Repository\CategoryRepository;
 use App\Repository\CustomerRepository;
-use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -24,15 +23,18 @@ class DoctrineController extends AbstractController
 
     public function index()
     {
-        $customer = $this->customerRepository->findName('malverdo23');
-//        $category = Category::create($customer[0],'asd','malverdo2');
 
-
+//        $customerNew = Customer::create('malverdoTest');
+//        $this->customerRepository->save($customerNew);
+        $customer = $this->customerRepository->findName('malverdoTest');
+        $ab = $customer[0]->getProducts()->toArray();
+//        $category = Category::create($customer[0],'asd2','malverdo2');
 //        $this->categoryRepository->save($category);
-        $b= $this->categoryRepository->findAll();
+        $b = $this->categoryRepository->findAll();
 
 
-        dd( $customer);
+
+        dd($b, $customer, $ab);
 
 
         $a = $this->customerRepository->findName('malverdo2');
