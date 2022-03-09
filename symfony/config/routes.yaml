@@ -58,3 +58,8 @@ doctrine:
     path: /doctrine
     controller: App\Infrastructure\Controller\Controller\DoctrineController::index
     methods: [GET, POST]
+
+session:
+    path: /session
+    controller: App\Infrastructure\Controller\Controller\SessionController::index
+    methods: [GET, POST]
