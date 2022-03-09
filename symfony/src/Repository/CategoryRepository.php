@@ -35,6 +35,11 @@ class CategoryRepository extends  AbstractBaseRepository
         $this->managerRegistry->flush();
     }
 
+    public  function saveFlush()
+    {
+        $this->managerRegistry->flush();
+    }
+
     public function update()
     {
         $this->managerRegistry->flush();
