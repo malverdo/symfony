@@ -28,8 +28,8 @@ blog_show:
     requirements:
         page: '1|2'
 
-cache:
-    path: /cache
+cacheHttp:
+    path: /cache/http
     controller: App\Infrastructure\Controller\Router\CacheHttpController::index
     methods: GET
 #    stateless: true
@@ -62,4 +62,9 @@ doctrine:
 session:
     path: /session
     controller: App\Infrastructure\Controller\Controller\SessionController::index
+    methods: [GET, POST]
+
+cache:
+    path: /cache
+    controller: App\Infrastructure\Controller\Controller\CacheController::index
     methods: [GET, POST]
