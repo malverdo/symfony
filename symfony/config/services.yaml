@@ -55,6 +55,9 @@ services:
         arguments:
             $adminEmail: '@generator.true'
 
+
+
+
     App\Infrastructure\Base\AbstractBaseRepository:
         autowire: false
 
