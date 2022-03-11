@@ -19,6 +19,13 @@ class CacheController extends AbstractController
 
     public function index()
     {
+        $value = $this->filesystemAdapter->get('my_cache_key', function (ItemInterface $item) {
+            $item->expiresAfter(20);
+            $computedValue = 'foobar';
 
+            return $computedValue;
+        });
+
+        dd($value);
     }
 }
