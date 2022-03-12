@@ -18,7 +18,7 @@ App\Entity\CardsmilePersonal\Category:
   ManyToOne:
     customers:
       targetEntity: App\Entity\CardsmilePersonal\Customer
-      inversedBy: category
+      inversedBy: categorys
       joinColumn:
         name: customer_id
         referencedColumnName: id
