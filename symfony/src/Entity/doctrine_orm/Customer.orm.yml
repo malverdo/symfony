@@ -17,4 +17,4 @@ App\Entity\CardsmilePersonal\Customer:
   oneToMany:
     categorys:
       targetEntity: App\Entity\CardsmilePersonal\Category
-      mappedBy: customer
+      mappedBy: customers
