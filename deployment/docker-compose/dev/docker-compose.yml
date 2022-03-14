@@ -36,3 +36,9 @@ services:
         volumes:
             - /home/${HOMENAME}/${ROOTNAMEPROJECT}/deployment/db/docker_postgres_init.sql:/docker-entrypoint-initdb.d/docker_postgres_init.sql
             - /home/${HOMENAME}/${ROOTNAMEPROJECT}/deployment/postgres-data:/var/lib/postgresql/data
+    redis:
+        build:
+            context: /home/${HOMENAME}//${ROOTNAMEPROJECT}/deployment/docker/dev/redis
+            dockerfile: Dockerfile
+        ports:
+            - "6379:6379"
