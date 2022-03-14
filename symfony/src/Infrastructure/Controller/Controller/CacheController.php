@@ -29,7 +29,7 @@ class CacheController extends AbstractController
     {
 
         $value = $this->redisAdapter->get('my_cache_key', function (ItemInterface $item) {
-            $item->expiresAfter(200);
+            $item->expiresAfter(230);
             $computedValue = 'foobar';
 
             return $computedValue;
