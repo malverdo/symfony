@@ -34,7 +34,8 @@ class CacheController extends AbstractController
 
             return $computedValue;
         });
-
-        dd($value);
+        $a = $this->redisAdapter->getItem('my_cache_key23');
+//        $a->set('234');
+        dd($value, $a);
     }
 }
