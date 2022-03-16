@@ -1,4 +1,7 @@
 {
+    "dejurin/php-google-translate-for-free": {
+        "version": "1.0.0"
+    },
     "doctrine/annotations": {
         "version": "1.13",
         "recipe": {
