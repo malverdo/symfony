@@ -57,6 +57,13 @@ services:
 
 
 
+    App\Infrastructure\Controller\Controller\LoggerController:
+        arguments:
+            $translate: '@Dejurin\GoogleTranslateForFree'
+
+    Dejurin\GoogleTranslateForFree:
+        autowire: false
+
 
     App\Infrastructure\Base\AbstractBaseRepository:
         autowire: false

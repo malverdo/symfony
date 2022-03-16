@@ -5,9 +5,17 @@ namespace App\Infrastructure\Controller\Controller;
 use Dejurin\GoogleTranslateForFree;
 use Psr\Log\LoggerInterface;
 use Psr\Log\LogLevel;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-class LoggerController
+class LoggerController extends AbstractController
 {
+    public GoogleTranslateForFree $translate;
+
+    public function __construct(GoogleTranslateForFree $translate)
+    {
+        $this->translate = $translate;
+    }
+
     public function index(LoggerInterface $logger)
     {
 
