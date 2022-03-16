@@ -10,7 +10,7 @@ class LoggerController
     public function index(LoggerInterface $logger)
     {
         $logger->info('I just got the logger');
-        $logger->error('An error occurred');
+        $logger->error('An error occurred',);
         $logger->log(LogLevel::INFO, 'An error occurred');
 
         $logger->critical('I left the oven on!', [
