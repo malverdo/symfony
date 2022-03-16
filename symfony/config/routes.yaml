@@ -68,3 +68,8 @@ cache:
     path: /cache
     controller: App\Infrastructure\Controller\Controller\CacheController::index
     methods: [GET, POST]
+
+logger:
+    path: /logger
+    controller: App\Infrastructure\Controller\Controller\LoggerController::index
+    methods: [GET, POST]
