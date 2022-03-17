@@ -22,7 +22,7 @@ class LoggerController extends AbstractController
         $source = 'en';
         $target = 'ru';
         $attempts = 5;
-        $text = 'Hello world';
+        $text = 'Привет мирф';
 
         $tr = new GoogleTranslateForFree();
         $result = $tr->translate($source, $target, $text, $attempts);
