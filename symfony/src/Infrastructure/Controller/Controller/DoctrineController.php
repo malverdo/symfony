@@ -23,7 +23,6 @@ class DoctrineController extends AbstractController
 
     public function index()
     {
-
 //        $customerNew = Customer::create('malverdoTest');
 //        $this->customerRepository->save($customerNew);
         $customer = $this->customerRepository->findName('malverdoTest');
@@ -35,9 +34,7 @@ class DoctrineController extends AbstractController
         $b = $this->categoryRepository->findAll();
 
 
-
         dd($b, $customer, $ab);
-
 
         $a = $this->customerRepository->findName('malverdo2');
         dd($a);
