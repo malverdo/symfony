@@ -18,11 +18,11 @@ class LoggerController extends AbstractController
 
     public function index(LoggerInterface $logger)
     {
-        throw new \InvalidArgumentException('asd');
+//        throw new \InvalidArgumentException('asd');
         $source = 'en';
         $target = 'ru';
         $attempts = 5;
-        $text = 'Привет мирф';
+        $text = 'Привет мир';
 
         $tr = new GoogleTranslateForFree();
         $result = $tr->translate($source, $target, $text, $attempts);
