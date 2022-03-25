@@ -23,7 +23,6 @@ class LoggerController extends AbstractController
         $target = 'ru';
         $attempts = 5;
         $text = 'Привет мир';
-
         $tr = new GoogleTranslateForFree();
         $result = $tr->translate($source, $target, $text, $attempts);
 
