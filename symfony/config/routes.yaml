@@ -78,3 +78,8 @@ nullObject:
     path: /nullObject
     controller: App\Infrastructure\Controller\Controller\NullController::index
     methods: [GET, POST]
+
+swagger:
+    path: /swagger
+    controller: App\Infrastructure\Controller\Controller\SwaggerController::index
+    methods: [GET, POST]
