@@ -4,6 +4,7 @@ namespace App\Repository;
 
 use App\Entity\Cardsmile\Customer;
 use App\Infrastructure\Base\AbstractBaseRepository;
+use App\Infrastructure\Null\NullCustomer;
 use Doctrine\Persistence\ManagerRegistry;
 
 class CustomerRepository  extends  AbstractBaseRepository
