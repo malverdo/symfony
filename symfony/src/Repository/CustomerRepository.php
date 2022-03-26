@@ -46,6 +46,9 @@ class CustomerRepository  extends  AbstractBaseRepository
         $this->managerRegistry->flush();
     }
 
+    /**
+     * @throws \Doctrine\ORM\NonUniqueResultException
+     */
     public function findName($name)
     {
         $createQueryBuilder = $this->createQueryBuilder($this->getTableAlias())
@@ -55,8 +58,7 @@ class CustomerRepository  extends  AbstractBaseRepository
             ->setMaxResults(3);
 
         $query = $createQueryBuilder->getQuery();
-        return $query->getResult();
-
+        return $query->getOneOrNullResult() ?? Customer::newNull();
     }
 
 
