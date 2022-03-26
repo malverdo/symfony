@@ -10,4 +10,12 @@ class NullCustomer extends Customer
     {
         return true;
     }
+
+    /**
+     * @return string
+     */
+    public function getName(): string
+    {
+        return 'default';
+    }
 }
