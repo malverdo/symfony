@@ -21,7 +21,8 @@ class NullController
     {
 //        $customerNew = Customer::create('malverdoTest');
 //        $this->customerRepository->save($customerNew);
-        $customer = $this->customerRepository->findName('malverdoTest');
+        $customer = $this->customerRepository->findName('malverdoTest2');
+
 
 
 
