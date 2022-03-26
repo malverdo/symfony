@@ -3,6 +3,7 @@
 namespace App\Entity\Cardsmile;
 
 use App\Entity\Cardsmile\Category;
+use App\Infrastructure\Null\NullCustomer;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
@@ -111,4 +112,13 @@ class Customer
         return $customer;
     }
 
+    public function isNull(): bool
+    {
+        return false;
+    }
+
+    public static function newNull(): NullCustomer
+    {
+        return new NullCustomer();
+    }
 }
