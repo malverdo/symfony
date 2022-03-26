@@ -73,3 +73,8 @@ logger:
     path: /logger
     controller: App\Infrastructure\Controller\Controller\LoggerController::index
     methods: [GET, POST]
+
+nullObject:
+    path: /nullObject
+    controller: App\Infrastructure\Controller\Controller\NullController::index
+    methods: [GET, POST]
