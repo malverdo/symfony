@@ -83,3 +83,8 @@ swagger:
     path: /swagger
     controller: App\Infrastructure\Controller\Controller\SwaggerController::index
     methods: [GET, POST]
+
+static:
+    path: /static
+    controller: App\Infrastructure\Controller\Controller\StaticController::index
+    methods: [GET, POST]
