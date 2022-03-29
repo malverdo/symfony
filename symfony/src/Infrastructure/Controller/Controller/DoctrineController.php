@@ -11,7 +11,6 @@ use Symfony\Component\HttpFoundation\Response;
 
 class DoctrineController extends AbstractController
 {
-
     private CustomerRepository $customerRepository;
     private CategoryRepository $categoryRepository;
 
