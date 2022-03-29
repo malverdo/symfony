@@ -14,13 +14,11 @@ class Kernel extends BaseKernel
     {
         return 'UTF-8';
     }
-
       #изменить ProjectDir - /home/apps/symfony
       #public function getProjectDir(): string
       #{
       #    return \dirname(__DIR__);
       #}
-
     #хранение кеша - /home/apps/symfony/var/cache/dev
     public function getCacheDir(): string
     {
