@@ -31,7 +31,9 @@ class DoctrineController extends AbstractController
 //        $category = Category::create($customer,'asd2','malverdo2');
 //        $this->categoryRepository->save($category);
 //        $b = $this->categoryRepository->findAll();
-
+        $a = 1;
+        $b =& $a;
+        unset($a);
 
         dd($ab, $customer, $b);
 
