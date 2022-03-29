@@ -8,7 +8,6 @@ use Symfony\Component\HttpFoundation\Response;
 class FlashController extends AbstractController
 {
 
-
     public function index()
     {
         $response = new Response('asd');
