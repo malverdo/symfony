@@ -27,9 +27,6 @@ class NullController
         $customer = $this->customerRepository->findName('malverdoTest34');
 
 
-
-
-
         dd($customer, $customer->isNull(), $customer->getName());
 
         $response = new Response('dog');
