@@ -35,7 +35,7 @@ class Customer
      * One product has many features. This is the inverse side.
      * @OneToMany(targetEntity="App\Entity\Cardsmile\Category", mappedBy="customers")
      */
-    private mixed $categorys;
+    public mixed $categorys;
 
     public function __construct() {
         $this->categorys = new ArrayCollection();
