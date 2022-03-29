@@ -27,7 +27,6 @@ class CacheController extends AbstractController
 
     public function index()
     {
-
         $value = $this->redisAdapter->get('my_cache_key', function (ItemInterface $item) {
             $item->expiresAfter(230);
             $computedValue = 'foobar';
