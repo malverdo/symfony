@@ -13,9 +13,7 @@ class MessageGenerator implements MessageInterface
             'That was one of the coolest updates I\'ve seen all day!',
             'Great work! Keep going!',
         ];
-
         $index = array_rand($messages);
-
         return $messages[$index];
     }
 }
