@@ -22,18 +22,18 @@ class DoctrineController extends AbstractController
 
     public function index()
     {
-//        $customerNew = Customer::create('malverdoTest');
+//        $customerNew = Customer::create('malverdoTestNew');
 //        $this->customerRepository->save($customerNew);
-        $customer = $this->customerRepository->findName('malverdoTest');
-        $ab = $customer[0]->getProducts()->toArray();
-        $ab[0]->setTitle('vk');
+        $customer = $this->customerRepository->findName('malverdoTestNew');
+        $b = $customer->categorys->toArray()[0]->getId();
+        $ab = $customer->getProducts()->toArray();
 
-//        $category = Category::create($customer[0],'asd2','malverdo2');
+//        $category = Category::create($customer,'asd2','malverdo2');
 //        $this->categoryRepository->save($category);
-        $b = $this->categoryRepository->findAll();
+//        $b = $this->categoryRepository->findAll();
 
 
-        dd($b, $customer, $ab);
+        dd($ab, $customer, $b);
 
         $a = $this->customerRepository->findName('malverdo2');
         dd($a);
