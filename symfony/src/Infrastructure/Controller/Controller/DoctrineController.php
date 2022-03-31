@@ -34,14 +34,10 @@ class DoctrineController extends AbstractController
         $a = 1;
         $b =& $a;
         unset($a);
-
         dd($ab, $customer, $b);
-
         $a = $this->customerRepository->findName('malverdo2');
         dd($a);
-
         $response = new Response('dog');
-
         return $response;
     }
 }
