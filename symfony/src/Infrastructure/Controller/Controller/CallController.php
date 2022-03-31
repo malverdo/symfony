@@ -9,8 +9,5 @@ class CallController
     public function index()
     {
 
-        $a = $this->redisAdapter->getItem('my_cache_key23');
-//        $a->set('234');
-        dd($value, $a);
     }
 }
