@@ -25,7 +25,6 @@ class LoggerController extends AbstractController
         $text = 'Привет мир';
         $tr = new GoogleTranslateForFree();
         $result = $tr->translate($source, $target, $text, $attempts);
-
         $logger->error('An error occurred',);
         $logger->log(LogLevel::INFO, 'An error occurred');
 
@@ -33,7 +32,6 @@ class LoggerController extends AbstractController
             // include extra "context" info in your logs
             'cause' => 'in_hurry',
         ]);
-
         dd($result);
 
     }
