@@ -10,6 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Doctrine\ORM\Mapping\Entity;
 use Doctrine\ORM\Mapping\OneToMany;
 use Doctrine\ORM\Mapping\Table;
+use Doctrine\Persistence\Event\PreUpdateEventArgs;
 
 /**
  * @Entity(repositoryClass="App\Repository\CustomerRepository")
@@ -120,5 +121,12 @@ class Customer
     public static function newNull(): NullCustomer
     {
         return new NullCustomer();
+    }
+
+    public function preUpdate(PreUpdateEventArgs $event)
+    {
+        if ($event->hasChangedField('username')) {
+            // Do something when the username is changed.
+        }
     }
 }
