@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Doctrine\ORM\Mapping\Entity;
 use Doctrine\ORM\Mapping\OneToMany;
 use Doctrine\ORM\Mapping\Table;
+use Doctrine\Persistence\Event\PreUpdateEventArgs;
 
 /**
  */
@@ -101,6 +102,13 @@ class Customer
         $customer = new self();
         $customer->setName($name);
         return $customer;
+    }
+
+    public function preUpdate(PreUpdateEventArgs $event)
+    {
+        if ($event->hasChangedField('username')) {
+            // Do something when the username is changed.
+        }
     }
 
 }
