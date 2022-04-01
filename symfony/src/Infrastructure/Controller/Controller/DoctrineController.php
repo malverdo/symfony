@@ -22,8 +22,8 @@ class DoctrineController extends AbstractController
 
     public function index()
     {
-//        $customerNew = Customer::create('malverdoTestNew');
-//        $this->customerRepository->save($customerNew);
+        $customerNew = Customer::create('malverdoTestNew2');
+        $this->customerRepository->save($customerNew);
         $customer = $this->customerRepository->findName('malverdoTestNew');
 //        $b = $customer->categorys->toArray()[0]->getId();
         $ab = $customer->getProducts()->toArray();
