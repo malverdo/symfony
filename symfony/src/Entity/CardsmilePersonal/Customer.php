@@ -104,11 +104,6 @@ class Customer
         return $customer;
     }
 
-    public function preUpdate(PreUpdateEventArgs $event)
-    {
-        if ($event->hasChangedField('username')) {
-            // Do something when the username is changed.
-        }
-    }
+
 
 }
