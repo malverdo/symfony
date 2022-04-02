@@ -28,7 +28,7 @@ class CookieController extends AbstractController
      */
     public function index(Request $request)
     {
-        $contentsDir = $this->getParameter('app.password').'/contents';
+        $contentsDir = $this->getParameter('app.password') . '/contents';
         $response = new Response('dog');
         $cookie = Cookie::create('foo2')
             ->withExpires(time() + 20)
