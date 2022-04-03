@@ -27,7 +27,6 @@ class DoctrineController extends AbstractController
         $customer = $this->customerRepository->findName('malverdoTestNew');
 //        $b = $customer->categorys->toArray()[0]->getId();
         $ab = $customer->getProducts()->toArray();
-
 //        $category = Category::create($customer,'asd2','malverdo2');
 //        $this->categoryRepository->save($category);
 //        $b = $this->categoryRepository->findAll();
