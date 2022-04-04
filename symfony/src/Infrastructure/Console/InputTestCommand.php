@@ -26,7 +26,7 @@ class InputTestCommand extends Command
         $name = $input->getArgument('name');
 
         $output->writeln(
-            sprintf('Электронный адрес - %s, Пароль - %s, Имя - %s', $email, $password, $name ?? 'default')
+            sprintf('Электронный адрес - %s, Пароль - %s, Имя - %s', $email, $password, $name ?? '')
         );
         return 1;
     }
