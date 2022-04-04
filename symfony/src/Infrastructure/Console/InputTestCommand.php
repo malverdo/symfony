@@ -19,7 +19,7 @@ class InputTestCommand extends Command
             ->addArgument('name', InputArgument::OPTIONAL);
     }
 
-    public function execute(InputInterface $input, OutputInterface $output)
+    public function execute(InputInterface $input, OutputInterface $output): int
     {
         $email = $input->getArgument('email');
         $password = $input->getArgument('password');
