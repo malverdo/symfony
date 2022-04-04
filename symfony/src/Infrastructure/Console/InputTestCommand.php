@@ -2,7 +2,12 @@
 
 namespace App\Infrastructure\Console;
 
-class InputTestCommand
+use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Output\OutputInterface;
+use Symfony\Component\Console\Input\InputArgument;
+
+class InputTestCommand extends Command
 {
     protected function configure()
     {
