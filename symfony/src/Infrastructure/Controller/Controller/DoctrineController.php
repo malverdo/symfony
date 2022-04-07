@@ -20,6 +20,12 @@ class DoctrineController extends AbstractController
         $this->categoryRepository = $categoryRepository;
     }
 
+    function test()
+    {
+        static $i = 0;
+        $i++;
+    }
+
     public function index()
     {
         $customerNew = Customer::create('malverdoTestNew2');
