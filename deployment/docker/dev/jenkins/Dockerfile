@@ -1,2 +1,2 @@
-FROM jenkins:1.565.3
+FROM jenkins/jenkins:lts
 
