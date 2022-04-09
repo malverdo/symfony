@@ -42,3 +42,12 @@ services:
             dockerfile: Dockerfile
         ports:
             - "6379:6379"
+    jenkins:
+        build:
+            context: /home/${HOMENAME}//${ROOTNAMEPROJECT}/deployment/docker/dev/jenkins
+            dockerfile: Dockerfile
+        ports:
+            - "8080:8080"
+            - "50000:50000"
+#        volumes:
+#            - /home/${HOMENAME}/${ROOTNAMEPROJECT}/deployment/jenkins:/var/jenkins_home
